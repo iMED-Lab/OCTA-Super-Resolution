@@ -265,7 +265,7 @@ if __name__ == '__main__':
             G_loss1 = 1 - ssim_loss_(lr_filter(x_lr_r[:,0:1,:,:]), hr_filter(x_hr_gen_r))
 
 
-            G_loss = 4 * ssim_loss1 + 8 * mse_loss + D_loss2 + 0.01 * ssim_loss2 # Back propagatio
+            G_loss = 4 * ssim_loss1 + 8 * mse_loss + D_loss # Back propagatio
 
             D.zero_grad()
             # G.zero_grad()
